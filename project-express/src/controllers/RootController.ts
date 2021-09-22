@@ -15,7 +15,6 @@ function requireAuth(req: Request, res: Response, next: NextFunction): void {
 
 @controller('')
 export class RootController {
-
     @get('/')
     @use(requireAuth)
     getRoot(req: Request, res: Response) {
@@ -53,6 +52,4 @@ export class RootController {
             </div>
         `);
     }
-
-
 }
