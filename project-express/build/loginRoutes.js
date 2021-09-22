@@ -1,4 +1,5 @@
 "use strict";
+/* Original un-refactored route logic */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
 var express_1 = require("express");
@@ -24,7 +25,7 @@ router.post('/login', function (req, res) {
         res.redirect('/');
     }
     else {
-        res.send("\n            <h1>Invalid email of password</h1>\n            <div>\n                <a href=\"/login\">Login</a>            </div>\n        ");
+        res.send("\n            <h1>Invalid email or password</h1>\n            <div>\n                <a href=\"/login\">Login</a>            </div>\n        ");
     }
 });
 router.get('/', function (req, res) {
